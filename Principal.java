@@ -120,7 +120,7 @@ class Principal{
         while(true){
             if(entrada2.hasNextInt()){
                 cantidadProducto = entrada2.nextInt();
-                if(cantidadProducto >= 0){
+                if(cantidadProducto > 0){
                 System.out.println("Se guardó la cantidad de producto correctamente");
                 break;
                 }else
@@ -180,6 +180,13 @@ class Principal{
     }
 
     static void mostrarProductos(Producto[] listaActual,String [] encabezado,int espacios){
+        for(Producto producto:listaActual){
+            if(producto!=null){
+                if(producto.getNombre().length()>espacios){
+                    espacios = producto.getNombre().length();
+                }
+            }
+        }
         for(int i=0;i<(encabezado.length+1)+(espacios*encabezado.length);i++){
             System.out.print("_");
         }
@@ -290,7 +297,14 @@ static int[] comprarProducto(Producto[] listaActual) {
 
 
 
-    static void imprimirVentas(Ventas[] listaActual,String [] encabezado,int espacios){
+    static void imprimirVentas(Ventas[] ventasActuales,String [] encabezado,int espacios){
+        for(Ventas producto:ventasActuales){
+            if(producto!=null){
+                if(producto.getNombreProducto().length()>espacios){
+                    espacios = producto.getNombreProducto().length();
+                }
+            }
+        }
         for(int i=0;i<(encabezado.length+1)+(espacios*encabezado.length);i++){
             System.out.print("_");
         }
@@ -305,21 +319,21 @@ static int[] comprarProducto(Producto[] listaActual) {
             System.out.print("|");
         }
         System.out.println("");
-        for(Ventas product:listaActual){
+        for(Ventas product:ventasActuales){
             if(product!=null){
                 System.out.print("|");
                 System.out.print(product.codigoProducto);
-                for(int i=0;i<espacios-String.valueOf(product.codigoProducto).length();i++){
+                for(int i=0;i<espacios-String.valueOf(product.getCodigoProducto()).length();i++){
                     System.out.print(" ");
                 }
                 System.out.print("|");
                 System.out.print(product.nombreProducto);
-                for(int i=0;i<espacios-product.nombreProducto.length();i++){
+                for(int i=0;i<espacios-product.getNombreProducto().length();i++){
                     System.out.print(" ");
                 }
                 System.out.print("|");
                 System.out.print(product.cantidadVenta);
-                for(int i=0;i<espacios-String.valueOf(product.cantidadVenta).length();i++){
+                for(int i=0;i<espacios-String.valueOf(product.getCantidadVenta()).length();i++){
                     System.out.print(" ");
                 }
                 System.out.print("|");

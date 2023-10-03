@@ -23,7 +23,7 @@ public class Ventas {
      *
      * @return El código del producto vendido.
      */
-    public int getcodigoProducto() {
+    public int getCodigoProducto() {
         return this.codigoProducto;
     }
     /**
@@ -31,7 +31,7 @@ public class Ventas {
      *
      * @return El nombre del producto vendido.
      */
-    public String getnombreProducto() {
+    public String getNombreProducto() {
         return this.nombreProducto;
     }
     /**
@@ -39,7 +39,7 @@ public class Ventas {
      *
      * @return La cantidad vendida del producto.
      */
-    public int getcantidadVenta() {
+    public int getCantidadVenta() {
         return this.cantidadVenta;
     }
     /**
@@ -47,7 +47,7 @@ public class Ventas {
      *
      * @param codigoProducto El nuevo código del producto vendido.
      */
-    public void setcodigoProducto(int codigoProducto){
+    public void setCodigoProducto(int codigoProducto){
         this.codigoProducto = codigoProducto;
     }
     /**
@@ -55,7 +55,7 @@ public class Ventas {
      *
      * @param nombreProducto El nuevo nombre del producto vendido.
      */
-    public void setnombreProducto(String nombreProducto){
+    public void setNombreProducto(String nombreProducto){
         this.nombreProducto = nombreProducto;
     }
     /**
@@ -63,7 +63,7 @@ public class Ventas {
      *
      * @param cantidadVenta La nueva cantidad vendida del producto.
      */
-    public void setcantidadVenta(int cantidadVenta){
+    public void setCantidadVenta(int cantidadVenta){
         this.cantidadVenta = cantidadVenta;
     }
 
