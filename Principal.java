@@ -275,7 +275,11 @@ static int[] comprarProducto(Producto[] listaActual) {
                                     indice = i;
                                     return new int[]{indice, cantidadProducto}; // Indica que se realizó una venta
                                 } else {
+                                    if(cantidadProducto<=0){
+                                        System.out.print("Valor no valido , vuelva a intentarlo: ");
+                                    }else{
                                     System.out.print("Stock insuficiente, vuelva a intentarlo: ");
+                                    }
                                 }
                             } else {
                                 System.out.print("Entrada no válida, vuelva a intentar: ");
