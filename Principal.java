@@ -1,5 +1,13 @@
+
 import java.util.Scanner;
+
+
 class Principal{
+    /**
+     * El método main es el punto de entrada principal para la aplicación.
+     *
+     * @param args Los argumentos de la línea de comandos (no se utilizan en este programa).
+     */
     public static void main(String[] args){
         int productosActuales = 3;
         int totalProductos = 10;
@@ -13,6 +21,7 @@ class Principal{
         int contadorVentas = 0;
         int[] valoresVenta = new int[2];
         boolean salir = false;
+        // Bucle principal del programa
         while(true){
             if(salir) break;
             menu1.mostrar();
@@ -54,7 +63,12 @@ class Principal{
 
     }
 
-
+    /**
+     * Agrega un nuevo producto a la lista de productos.
+     *
+     * @param listaActual La lista actual de productos.
+     * @return La lista actualizada de productos después de agregar un nuevo producto.
+     */
     static Producto[] agregarProducto (Producto[] listaActual){
         int indice = 0;
         while(indice < listaActual.length && listaActual[indice]!=null){
@@ -64,6 +78,13 @@ class Principal{
         return listaActual;
     }
 
+    /**
+     * Obtiene los datos de un nuevo producto del usuario.
+     *
+     * @param listaActual La lista actual de productos.
+     * @param indice      El índice en el que se debe agregar el nuevo producto.
+     * @return Una lista de enteros los datos ingresados por el usuario.
+     */
     static Producto obtenerDatosProducto(Producto[] listaActual, int indice){
         Scanner entrada2 = new Scanner(System.in);
         String nombreProducto;
@@ -143,7 +164,13 @@ class Principal{
         Producto datosProducto = new Producto(nombreProducto,cantidadProducto,codigoProducto);
         return datosProducto;
     }
-    
+
+    /**
+     * Inicializa la lista de productos con algunos productos predefinidos.
+     *
+     * @param totalProductos El número total de productos a inicializar.
+     * @return Una lista de productos inicializada.
+     */
     static Producto[] inicializarProductos(int totalProductos){
         Producto[] listaInicial = new Producto[totalProductos];
         listaInicial[0] = new Producto("pina",2,1);
