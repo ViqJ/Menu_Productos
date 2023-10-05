@@ -1,5 +1,5 @@
 /**
- * La clase Ventas representa una transacción de venta de un producto.
+ * La clase Ventas representa una transaccion de venta de un producto.
  */
 public class Ventas {
     int codigoProducto;
@@ -8,7 +8,7 @@ public class Ventas {
     /**
      * Constructor de la clase Ventas.
      *
-     * @param codigoProducto   El código del producto vendido.
+     * @param codigoProducto   El codigo del producto vendido.
      * @param nombreProducto   El nombre del producto vendido.
      * @param cantidadVenta    La cantidad vendida del producto.
      */
@@ -19,9 +19,9 @@ public class Ventas {
         
     }
     /**
-     * Obtiene el código del producto vendido.
+     * Obtiene el codigo del producto vendido.
      *
-     * @return El código del producto vendido.
+     * @return El codigo del producto vendido.
      */
     public int getCodigoProducto() {
         return this.codigoProducto;
@@ -43,9 +43,9 @@ public class Ventas {
         return this.cantidadVenta;
     }
     /**
-     * Establece el código del producto vendido.
+     * Establece el codigo del producto vendido.
      *
-     * @param codigoProducto El nuevo código del producto vendido.
+     * @param codigoProducto El nuevo codigo del producto vendido.
      */
     public void setCodigoProducto(int codigoProducto){
         this.codigoProducto = codigoProducto;

@@ -1,6 +1,6 @@
 import java.util.Scanner;
     /**
-    * La clase Menu representa un menú interactivo para el usuario.
+    * La clase Menu representa un menu interactivo para el usuario.
     */
 public class Menu {
     public Scanner entrada = new Scanner(System.in);
@@ -11,7 +11,7 @@ public class Menu {
     public Menu(){
     }
     /**
-    * Muestra las opciones disponibles en el menú.
+    * Muestra las opciones disponibles en el menu.
     */
     public void mostrar(){
         System.out.println("----------Menu----------");
@@ -20,9 +20,9 @@ public class Menu {
         }
     }
     /**
-     * Permite al usuario seleccionar una opción del menú.
+     * Permite al usuario seleccionar una opcion del menu.
      *
-     * @return La opción seleccionada por el usuario.
+     * @return La opcion seleccionada por el usuario.
      */
     public int selecionarOpcion(){
         int seleccion = 0;

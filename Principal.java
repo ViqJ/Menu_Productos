@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 class Principal{
     /**
-     * El método main es el punto de entrada principal para la aplicación.
+     * El metodo main es el punto de entrada principal para la aplicacion.
      *
-     * @param args Los argumentos de la línea de comandos (no se utilizan en este programa).
+     * @param args Los argumentos de la linea de comandos (no se utilizan en este programa).
      */
     public static void main(String[] args){
         int productosActuales = 3;
@@ -67,7 +67,7 @@ class Principal{
      * Agrega un nuevo producto a la lista de productos.
      *
      * @param listaActual La lista actual de productos.
-     * @return La lista actualizada de productos después de agregar un nuevo producto.
+     * @return La lista actualizada de productos despues de agregar un nuevo producto.
      */
     static Producto[] agregarProducto (Producto[] listaActual){
         int indice = 0;
@@ -82,7 +82,7 @@ class Principal{
      * Obtiene los datos de un nuevo producto del usuario.
      *
      * @param listaActual La lista actual de productos.
-     * @param indice      El índice en el que se debe agregar el nuevo producto.
+     * @param indice      El indice en el que se debe agregar el nuevo producto.
      * @return Una lista de enteros los datos ingresados por el usuario.
      */
     static Producto obtenerDatosProducto(Producto[] listaActual, int indice){
@@ -95,7 +95,7 @@ class Principal{
         System.out.print("Digite nombre de producto: ");
         while(true){
             if(entrada2.hasNextInt()){
-                System.out.print("Nombre no válido, vuelva a intentarlo: ");
+                System.out.print("Nombre no valido, vuelva a intentarlo: ");
                 entrada2.next();
                 
                 continue;
@@ -110,7 +110,7 @@ class Principal{
                 }
             }
             if(!valorExiste){
-                System.out.println("Se guardó el nombre correctamente");
+                System.out.println("Se guardo el nombre correctamente");
                 break;
             }
             
@@ -121,7 +121,7 @@ class Principal{
             if(entrada2.hasNextInt()){
                 cantidadProducto = entrada2.nextInt();
                 if(cantidadProducto > 0){
-                System.out.println("Se guardó la cantidad de producto correctamente");
+                System.out.println("Se guardo la cantidad de producto correctamente");
                 break;
                 }else
                 System.out.print("Valor no valido, vuelva a intentar: ");
@@ -131,7 +131,7 @@ class Principal{
                 }
         }
         //validacion de codigo de producto
-        /*Opción usuario digita numero positivo 
+        /*Opcion usuario digita numero positivo 
         System.out.print("Digite codigo de producto: ");
         while(true){
             if(entrada2.hasNextInt()){
@@ -148,7 +148,7 @@ class Principal{
                 }
             }
             if(!valorExiste){
-                System.out.println("Se guardó el codigo de producto correctamente");
+                System.out.println("Se guardo el codigo de producto correctamente");
                 break;
             }
             }
@@ -168,7 +168,7 @@ class Principal{
     /**
      * Inicializa la lista de productos con algunos productos predefinidos.
      *
-     * @param totalProductos El número total de productos a inicializar.
+     * @param totalProductos El numero total de productos a inicializar.
      * @return Una lista de productos inicializada.
      */
     static Producto[] inicializarProductos(int totalProductos){
@@ -246,7 +246,7 @@ static int[] comprarProducto(Producto[] listaActual) {
                 if (listaActual[i] != null && codigoProducto == listaActual[i].getCodigo()) {
                     productoEncontrado = true;
                     if (listaActual[i].getCantidad() == 0) {
-                        System.out.print("Producto con stock insuficiente. ¿Desea volver al menú? 1.Si, 2.No: ");
+                        System.out.print("Producto con stock insuficiente. ¿Desea volver al menu? 1.Si, 2.No: ");
                         int respueSalir;
                         while (true) {
                             if (entrada2.hasNextInt()) {
@@ -254,15 +254,15 @@ static int[] comprarProducto(Producto[] listaActual) {
                                 if (respueSalir == 1 || respueSalir == 2) {
                                     break;
                                 } else {
-                                    System.out.print("Opción no válida, vuelva a intentarlo: ");
+                                    System.out.print("Opcion no valida, vuelva a intentarlo: ");
                                 }
                             } else {
-                                System.out.print("Valor no válido, vuelva a intentar: ");
+                                System.out.print("Valor no valido, vuelva a intentar: ");
                                 entrada2.next();
                             }
                         }
                         if (respueSalir == 1) {
-                            return new int[]{-1, 0}; // Indica que no se realizó ninguna venta
+                            return new int[]{-1, 0}; // Indica que no se realizo ninguna venta
                         }
                     } else {
                         // validacion de cantidad de producto
@@ -271,9 +271,9 @@ static int[] comprarProducto(Producto[] listaActual) {
                             if (entrada2.hasNextInt()) {
                                 cantidadProducto = entrada2.nextInt();
                                 if (cantidadProducto > 0 && listaActual[i].getCantidad() - cantidadProducto >= 0) {
-                                    System.out.println("Se realizó venta, muchas gracias");
+                                    System.out.println("Se realizo venta, muchas gracias");
                                     indice = i;
-                                    return new int[]{indice, cantidadProducto}; // Indica que se realizó una venta
+                                    return new int[]{indice, cantidadProducto}; // Indica que se realizo una venta
                                 } else {
                                     if(cantidadProducto<=0){
                                         System.out.print("Valor no valido , vuelva a intentarlo: ");
@@ -282,7 +282,7 @@ static int[] comprarProducto(Producto[] listaActual) {
                                     }
                                 }
                             } else {
-                                System.out.print("Entrada no válida, vuelva a intentar: ");
+                                System.out.print("Entrada no valida, vuelva a intentar: ");
                                 entrada2.next();
                             }
                         }
@@ -290,10 +290,10 @@ static int[] comprarProducto(Producto[] listaActual) {
                 }
             }
             if (!productoEncontrado) {
-                System.out.println("Código de producto no encontrado. Vuelva a intentarlo.");
+                System.out.println("Codigo de producto no encontrado. Vuelva a intentarlo.");
             }
         } else {
-            System.out.print("Entrada no válida, vuelva a intentar: ");
+            System.out.print("Entrada no valida, vuelva a intentar: ");
             entrada2.next();
         }
     }

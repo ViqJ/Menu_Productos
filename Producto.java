@@ -8,7 +8,7 @@ public class Producto{
      *
      * @param nombre   El nombre del producto.
      * @param cantidad La cantidad inicial del producto en el inventario.
-     * @param codigo   El código único del producto.
+     * @param codigo   El codigo unico del producto.
      */
         public Producto(String nombre, int cantidad, int codigo){
             this.nombre = nombre;
@@ -16,7 +16,7 @@ public class Producto{
             this.codigo = codigo;
         }
     /**
-     * Reduce la cantidad del producto después de una compra.
+     * Reduce la cantidad del producto despues de una compra.
      *
      * @param cantidadComprada La cantidad comprada que se debe restar al inventario.
      */
@@ -33,9 +33,9 @@ public class Producto{
             return this.nombre;
         }
     /**
-     * Obtiene el código único del producto.
+     * Obtiene el codigo unico del producto.
      *
-     * @return El código único del producto.
+     * @return El codigo unico del producto.
      */
         public int getCodigo(){
             return this.codigo;
