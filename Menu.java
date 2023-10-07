@@ -4,7 +4,7 @@ import java.util.Scanner;
     */
 public class Menu {
     public Scanner entrada = new Scanner(System.in);
-    public String [] opcionesMenu = {"1. Agregar un producto","2. Comprar un producto","3. Ver ventas","4. Salir"};
+    public String [] opcionesMenu = {"1. Ver productos","2. Agregar un producto","3. Comprar un producto","4. Ver ventas","5. Salir"};
     /**
      * Constructor de la clase Menu.
      */

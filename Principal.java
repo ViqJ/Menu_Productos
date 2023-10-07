@@ -28,6 +28,9 @@ class Principal{
             switch(menu1.selecionarOpcion()){
                 case 1:
                     mostrarProductos(listaProductos,encabezadoProductos,espaciosEncabezados);
+                    break;
+                case 2:
+                    mostrarProductos(listaProductos,encabezadoProductos,espaciosEncabezados);
                     if(productosActuales==totalProductos){
                         System.out.println("Lista completa, no se puede agregar productos");
                     }else{
@@ -36,7 +39,7 @@ class Principal{
                         productosActuales++;
                     }
                     break;
-                case 2:
+                case 3:
                     mostrarProductos(listaProductos,encabezadoProductos,espaciosEncabezados);
                     valoresVenta = comprarProducto(listaProductos);
                     int indiceVenta = valoresVenta[0];
@@ -48,10 +51,10 @@ class Principal{
                         contadorVentas++;
                     }
                     break;
-                case 3:
+                case 4:
                     imprimirVentas(ventasRealizadas,encabezadoVentas,espaciosEncabezados);
                     break;
-                case 4:
+                case 5:
                     System.out.println("Muchas gracias");
                     salir = true;
                     break;
